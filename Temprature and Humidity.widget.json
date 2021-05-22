@@ -1,0 +1,70 @@
+{
+    "template": "<style>\n  .headline {\n  \tfont-size: {{config.titleFontSize}}pt;\n  \tmargin-bottom: 0.5rem;\n  \tcolor: {{config.titleColor}};\n  }\n  .item {\n  \tdisplay: grid;\n  \tgrid-template-areas:\n  \t\t\"label label\"\n  \t\t\"icon value\";\n  \talign-items: center;\n  }\n\n\t.label {\n  \tgrid-area: label;\n  \tcolor: {{config.labelColor}};\n  \ttext-align: center;\n  \tfont-size: {{config.labelFontSize}}pt;\n  }\n  .itemValue {\n  \tgrid-area: value;\n  \tcolor: {{config.itemValueColor}};\n  \tfont-size: {{config.itemValueFontSize}}pt;\n  \ttext-align: left;\n  }\n  \n  .icon {\n  \tgrid-area: icon;\n  \tfont-size: {{config.itemValueFontSize}}pt;\n  \ttext-align: right;\n  }\n</style>\n\n<div class=\"row\">\n  <div class=\"headline\">{{config.title}}</div>\n    <div class=\"col-xs-6 item\">\n        <span class=\"label\">{{config.temperatureLabelText}}</span>\n        <span class=\"icon\"><widget-icon iconset=\"'smarthome-set'\" icon=\"'temperature'\" /></span>\n        <span class=\"itemValue\">{{'%.1f°C' | sprintf:itemState(config.itemTemperature).split(' ')[0]}}</span>\n    </div>\n    <div class=\"col-xs-6 item\">\n        <span class=\"label\">{{config.humidityLabelText}}</span>\n      \t<span class=\"icon\"><widget-icon iconset=\"'smarthome-set'\" icon=\"'drop'\" /></span>\n        <span class=\"itemValue\">{{'%.1f%%' | sprintf:itemState(config.itemHumidity).split(' ')[0]}}</span>\n    </div>\n</div>",
+    "name": "Temprature & Humidity",
+    "id": "Temprature and Humidity",
+    "settings": [
+        {
+            "id": "title",
+            "label": "Title",
+            "type": "string"
+        },
+        {
+            "id": "titleFontSize",
+            "label": "Title Font Size",
+            "default": "28",
+            "type": "number"
+        },
+        {
+            "id": "titleColor",
+            "label": "Title Color",
+            "default": "white",
+            "type": "color"
+        },
+        {
+            "id": "itemTemperature",
+            "label": "Temperature Item",
+            "type": "item"
+        },
+        {
+            "id": "temperatureLabelText",
+            "label": "Temperature Label",
+            "default": "Temperature",
+            "type": "string"
+        },
+        {
+            "id": "itemHumidity",
+            "label": "Humidity Item",
+            "type": "item"
+        },
+        {
+            "id": "humidityLabelText",
+            "label": "Humidity Label",
+            "default": "Humidity",
+            "type": "string"
+        },
+        {
+            "id": "labelFontSize",
+            "label": "Label Font Size",
+            "default": "14",
+            "type": "number"
+        },
+        {
+            "id": "labelColor",
+            "label": "Label Color",
+            "default": "white",
+            "type": "color"
+        },
+        {
+            "id": "itemValueFontSize",
+            "label": "Item Value Font Size",
+            "default": "28",
+            "type": "string"
+        },
+        {
+            "id": "itemValueColor",
+            "label": "Item Value Color",
+            "default": "white",
+            "type": "color"
+        }
+    ]
+}
