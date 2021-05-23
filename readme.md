@@ -2,4 +2,4 @@
 
 Simple Widget that displays Temperature and Humidity Values
 
-![Screenshot](https://github.com/RingoRohe/HABpanel-widget-TemperatureAndHumidity/screen.png)
+![Screenshot](https://raw.githubusercontent.com/RingoRohe/HABpanel-widget-TemperatureAndHumidity/develop/screen.png)
