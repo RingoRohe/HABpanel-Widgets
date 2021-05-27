@@ -1,5 +1,3 @@
-# HABpanel Temperature and Humidity Widget
+# HABpanel Widget
 
-Simple Widget that displays Temperature and Humidity Values
-
-![Screenshot](https://raw.githubusercontent.com/RingoRohe/HABpanel-widget-TemperatureAndHumidity/develop/screen.png)
+Some Widgets for my HABpanel
